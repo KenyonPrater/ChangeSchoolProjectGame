@@ -1,6 +1,10 @@
 #Eclipse
 .metadata/*
-bin/*
+.project
+.classpath
+ChangeGame/bin/*
+ChangeGame/lib/*
+ChangeGame/.settings/*
 
 
 # Windows image file caches
