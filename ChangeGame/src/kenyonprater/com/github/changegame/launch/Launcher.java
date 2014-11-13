@@ -11,7 +11,7 @@ import org.newdawn.slick.SlickException;
 public class Launcher {
 	
 	public static String APPNAME = "Change Game for English";
-	private boolean DEBUG = false;
+	private static boolean DEBUG = false;
 	
 	public static void main(String[] args)
 	{

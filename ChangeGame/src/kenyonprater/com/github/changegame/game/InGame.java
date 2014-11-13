@@ -14,7 +14,6 @@ public class InGame extends BasicGameState{
 	{
 		super();
 		ID = id;
-		
 	}
 	
 	@Override
