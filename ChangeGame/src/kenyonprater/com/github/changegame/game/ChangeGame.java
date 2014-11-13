@@ -15,13 +15,13 @@ public class ChangeGame extends StateBasedGame{
 	public ChangeGame(String name, boolean debug) {
 		super(name);
 		ISDEBUG = debug;
-		this.getContainer().setShowFPS(debug);
-
 	}
-
+	
 	@Override
 	public void initStatesList(GameContainer container) throws SlickException {
 		this.addState(new InGame(STATEGAME));
+		container.setShowFPS(ISDEBUG); //TODO: Move out of initStatesList
+		
 	}
 
 }
