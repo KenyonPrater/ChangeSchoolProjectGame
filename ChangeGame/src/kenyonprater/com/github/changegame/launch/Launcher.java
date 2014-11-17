@@ -11,15 +11,19 @@ import org.newdawn.slick.SlickException;
 public class Launcher {
 	
 	public static String APPNAME = "Change Game for English";
-	private static boolean DEBUG = false;
+	private static boolean DEBUG = true;
+	
+	public static final int HEI = 480;
+	public static final int WID = 640;
 	
 	public static void main(String[] args)
 	{
+		
 		try
 		{
 			AppGameContainer appgc;
 			appgc = new AppGameContainer(new ChangeGame(APPNAME, DEBUG));
-			appgc.setDisplayMode(640, 480, false);
+			appgc.setDisplayMode(WID, HEI, false);
 			appgc.start();
 		}
 		catch (SlickException ex)

@@ -1,9 +1,10 @@
-package kenyonprater.com.github.changegame.game;
+package kenyonprater.com.github.changegame.world;
 
 import org.newdawn.slick.Animation;
 
 public class Entity {
 
+	private World world;
 	private Animation sprite;
 	private float x;
 	private float y;
@@ -20,7 +21,7 @@ public class Entity {
 
 	public void draw()
 	{
-		sprite.draw(x, y);
+		sprite.draw(getX(), getY());
 	}
 	
 	public void update(double dt)

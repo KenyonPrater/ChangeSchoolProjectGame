@@ -10,6 +10,10 @@ import org.newdawn.slick.SlickException;
 
 public class SlickTest extends BasicGame
 {
+	
+	public static final int HEI = 480;
+	public static final int WID = 640;
+	
 	public SlickTest(String gamename)
 	{
 		super(gamename);
@@ -33,7 +37,7 @@ public class SlickTest extends BasicGame
 		{
 			AppGameContainer appgc;
 			appgc = new AppGameContainer(new SlickTest("Simple Slick Game"));
-			appgc.setDisplayMode(640, 480, false);
+			appgc.setDisplayMode(WID, HEI, false);
 			appgc.start();
 		}
 		catch (SlickException ex)
