@@ -27,7 +27,7 @@ public class InGame extends BasicGameState{
 	@Override
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
-		w = new World("/res/test.tmx", "/res/testimg.png");
+		w = new World(new String[]{"/res/test1.tmx","/res/test2.tmx"}, "/res/testimg.png");
 		ArrayList<Animation> anims = new ArrayList<Animation>();
 		anims.add(AnimationLoader.load("/res/spritetestleft.png", 64, 64));
 		anims.add(AnimationLoader.load("/res/spritetestright.png", 64, 64));
@@ -44,7 +44,6 @@ public class InGame extends BasicGameState{
 	@Override
 	public void update(GameContainer container, StateBasedGame game, int delta)
 			throws SlickException {
-		
 		w.update(delta/1000.0);
 	}
 	

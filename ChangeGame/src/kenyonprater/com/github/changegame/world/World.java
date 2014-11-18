@@ -1,11 +1,7 @@
 package kenyonprater.com.github.changegame.world;
 
 import java.util.ArrayList;
-
-import kenyonprater.com.github.changegame.helper.AnimationLoader;
 import kenyonprater.com.github.changegame.launch.Launcher;
-
-import org.newdawn.slick.Animation;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
@@ -14,11 +10,11 @@ public class World {
 
 	public ArrayList<Entity> entityList;
 	public Image bg;
-	public TiledMap tileMap;
+	public TileMapBlender tiles;
 	
-	public World(TiledMap tile, Image background)
+	public World(ArrayList<TiledMap> tileList, Image background)
 	{
-		tileMap = tile;
+		tiles = tiles;
 		bg = background;
 		entityList = new ArrayList<Entity>();
 	}
@@ -33,14 +29,23 @@ public class World {
 		entityList.remove(e);
 	}
 	
-	public World(String tile, String background)
+	public World(String[] tile, String background)
 	{
+		ArrayList<TiledMap> tileList = new ArrayList<TiledMap>();
 		try {
-			tileMap = new TiledMap(tile);
+			
+			for(int i = 0; i < tile.length; i++)
+			{
+				tileList.add(new TiledMap(tile[i]));
+			}
+			
 		} catch (SlickException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		tiles = new TileMapBlender(tileList.get(0).getWidth(), tileList.get(0).getHeight(), tileList);
+		
 		try {
 			bg = new Image(background);
 		} catch (SlickException e) {
@@ -62,7 +67,7 @@ public class World {
 	public void draw()
 	{
 		bg.draw(0, 0, Launcher.WID, Launcher.HEI);
-		tileMap.render(0, 0);
+		tiles.render(0, 0);
 		for (int i = 0; i < entityList.size(); i++)
 		{
 			entityList.get(i).draw();

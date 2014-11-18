@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="spritetestleft" tilewidth="32" tileheight="32">
+  <image source="spritetestleft.png" width="128" height="64"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="40" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3QuQ0AMAzDQDufs//E4RYWEBUs2F5GxKBJi1LsNx0quoLf7WM/+yl52c9+St/tY7+//R4uvT4UYAkAAA==
+  </data>
+ </layer>
+</map>
