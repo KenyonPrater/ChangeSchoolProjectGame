@@ -1,9 +1,12 @@
 package kenyonprater.com.github.changegame.game;
 
-import kenyonprater.com.github.changegame.helper.AnimationLoader;
-import kenyonprater.com.github.changegame.world.Entity;
-import kenyonprater.com.github.changegame.world.World;
+import java.util.ArrayList;
 
+import kenyonprater.com.github.changegame.helper.AnimationLoader;
+import kenyonprater.com.github.changegame.world.World;
+import kenyonprater.com.github.changegame.world.player.Player;
+
+import org.newdawn.slick.Animation;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -24,9 +27,12 @@ public class InGame extends BasicGameState{
 	@Override
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
-		
 		w = new World("/res/test.tmx", "/res/testimg.png");
-		w.addEntity(new Entity(400, 100, AnimationLoader.load("/res/testimg.png", 64,64)));
+		ArrayList<Animation> anims = new ArrayList<Animation>();
+		anims.add(AnimationLoader.load("/res/spritetestleft.png", 64, 64));
+		anims.add(AnimationLoader.load("/res/spritetestright.png", 64, 64));
+		Player p = new Player(0, 100, anims, container.getInput());
+		w.addEntity(p);
 	}
 
 	@Override
@@ -39,9 +45,9 @@ public class InGame extends BasicGameState{
 	public void update(GameContainer container, StateBasedGame game, int delta)
 			throws SlickException {
 		
-		
+		w.update(delta/1000.0);
 	}
-
+	
 	@Override
 	public int getID() {
 		return 1;
