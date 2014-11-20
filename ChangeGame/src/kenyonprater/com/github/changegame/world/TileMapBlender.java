@@ -102,7 +102,7 @@ public class TileMapBlender {
 		{
 			for(int x = centerX-size; x <= centerX+size; x++)
 			{
-				for(int y = centerY-size; y <= centerY+size; y++)
+				for(int y = 0; y <= mapIndex[0].length; y++)
 				{
 					if(x >= 0 && x < mapIndex.length && y >=0 && y < mapIndex[0].length)
 					{
