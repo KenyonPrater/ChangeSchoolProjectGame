@@ -27,4 +27,36 @@ public class PlayerFactory {
 		return p;
 	}
 	
+	public static Player getStudent(Input in)
+	{
+		ArrayList<Animation> anims = new ArrayList<Animation>();
+		for(String s: ImageRefs.student)
+		{
+			try {
+				anims.add(new Animation(new SpriteSheet(s,16,48),250));
+			} catch (SlickException e) {
+				e.printStackTrace();
+			}
+		}
+		Player p = new Player(0, 0, anims, in);
+		p.setState(2);
+		return p;
+	}
+	
+	public static Player getHolden(Input in)
+	{
+		ArrayList<Animation> anims = new ArrayList<Animation>();
+		for(String s: ImageRefs.holden)
+		{
+			try {
+				anims.add(new Animation(new SpriteSheet(s,32,64),250));
+			} catch (SlickException e) {
+				e.printStackTrace();
+			}
+		}
+		Player p = new Player(0, 0, anims, in);
+		p.setState(3);
+		return p;
+	}
+	
 }

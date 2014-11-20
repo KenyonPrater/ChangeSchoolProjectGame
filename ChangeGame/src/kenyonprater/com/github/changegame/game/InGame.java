@@ -29,7 +29,7 @@ public class InGame extends BasicGameState{
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
 		w = new World(new String[]{"/res/lvl/1-1.tmx","/res/lvl/3-11.tmx"}, "/res/bg/child.png");
-		Player p = PlayerFactory.getChild(container.getInput());
+		Player p = PlayerFactory.getHolden(container.getInput());
 		p.setX(0);
 		p.setY(400);
 		w.addEntity(p);

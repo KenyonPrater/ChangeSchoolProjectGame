@@ -98,14 +98,16 @@ public class TileMapBlender {
 	
 	public void changeAllTileInArea(int centerX, int centerY, int size, int newTileID)
 	{
-		System.out.println(this.getTileWidth());
-		for(int x = centerX-size; x <= centerX+size; x++)
+		if(newTileID < this.maps.size())
 		{
-			for(int y = centerY-size; y <= centerY+size; y++)
+			for(int x = centerX-size; x <= centerX+size; x++)
 			{
-				if(x >= 0 && x < mapIndex.length && y >=0 && y < mapIndex[0].length)
+				for(int y = centerY-size; y <= centerY+size; y++)
 				{
-					changeTile(x, y, newTileID);
+					if(x >= 0 && x < mapIndex.length && y >=0 && y < mapIndex[0].length)
+					{
+						changeTile(x, y, newTileID);
+					}
 				}
 			}
 		}
