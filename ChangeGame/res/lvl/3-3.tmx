@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="holden" tilewidth="32" tileheight="32">
+  <image source="../tile/holden.png" width="480" height="480"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="40" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMgpELfIDYF4j90Nj41JFqLiVqo4E4Bohj0dj41MEABxBzAjEfEPMToR4XwKc2C4izgTgHjY1PHQwwAjETFDMToR4XwKe2EoirgLgajY1PHQwIALEgFAsRoR4XIKS2EwcbnzoQkAdiBShWhIp1IeFOND4+jK4WBPSB2GAQ03ZAbD+IaQCl8szwYAkAAA==
+  </data>
+ </layer>
+</map>
