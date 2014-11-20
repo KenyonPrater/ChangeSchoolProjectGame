@@ -57,7 +57,7 @@ public class World {
 	
 	public void update(double delta)
 	{
-		
+		tiles.update(delta);
 		for (int i = 0; i < entityList.size(); i++)
 		{
 			entityList.get(i).update(delta);
