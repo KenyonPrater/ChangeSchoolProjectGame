@@ -60,7 +60,7 @@ public class World {
 		tiles.update(delta);
 		for (int i = 0; i < entityList.size(); i++)
 		{
-			entityList.get(i).update(delta);
+			entityList.get(i).update(this, delta);
 		}
 	}
 	

@@ -1,8 +1,6 @@
 package kenyonprater.com.github.changegame.world;
 
 import java.util.ArrayList;
-
-import org.lwjgl.Sys;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.tiled.TiledMap;
@@ -33,9 +31,9 @@ public class TileMapBlender {
 		{
 			for(int j = 0; j < mapIndex[0].length; j++)
 			{
-				mapIndex[i][j] = i%2;
-				prevMapIndex[i][j] = (i+1)%2;
-				fadeTime[i][j] = 1.0f;
+				mapIndex[i][j] = 0;
+				prevMapIndex[i][j] = 0;
+				fadeTime[i][j] = 0.0f;
 			}
 		}
 		
@@ -76,17 +74,44 @@ public class TileMapBlender {
 					if(fadeTime[i][j] == 0)
 					{
 						prevMapIndex[i][j] = mapIndex[i][j];
-						System.out.println("Yep");
 					}
 				}
 			}
 		}
 	}
 	
-	public void changeTile(int x, int y, int newTileID, float fadeTime)
+	public void changeTile(int x, int y, int newTileID)
 	{
-		
+		if(mapIndex[x][y] != newTileID)
+		{
+			
+			prevMapIndex[x][y] = mapIndex[x][y];
+			mapIndex[x][y] = newTileID;
+			fadeTime[x][y] = maxFadeTime;
+		}
 	}
 	
+	public void changeAllTileInArea(int centerX, int centerY, int size, int newTileID)
+	{
+		System.out.println(this.getTileWidth());
+		for(int x = centerX-size; x <= centerX+size; x++)
+		{
+			for(int y = centerY-size; y <= centerY+size; y++)
+			{
+				if(x >= 0 && x < mapIndex.length && y >=0 && y < mapIndex[0].length)
+				{
+					changeTile(x, y, newTileID);
+				}
+			}
+		}
+	}
 	
+	public int getTileHeight()
+	{
+		return maps.get(0).getTileHeight();
+	}
+	public int getTileWidth()
+	{
+		return maps.get(0).getTileWidth();
+	}
 }

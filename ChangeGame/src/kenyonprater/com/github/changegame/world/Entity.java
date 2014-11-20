@@ -24,7 +24,7 @@ public class Entity {
 		sprite.draw(getX(), getY());
 	}
 	
-	public void update(double dt)
+	public void update(World w, double dt)
 	{
 		x += (dx*dt);
 		y += (dy*dt);

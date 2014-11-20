@@ -31,7 +31,10 @@ public class InGame extends BasicGameState{
 		ArrayList<Animation> anims = new ArrayList<Animation>();
 		anims.add(AnimationLoader.load("/res/spritetestleft.png", 64, 64));
 		anims.add(AnimationLoader.load("/res/spritetestright.png", 64, 64));
+		anims.add(AnimationLoader.load("/res/spritetestleft.png", 64, 64));
+		anims.add(AnimationLoader.load("/res/spritetestright.png", 64, 64));
 		Player p = new Player(0, 100, anims, container.getInput());
+		p.setState(1);
 		w.addEntity(p);
 	}
 
