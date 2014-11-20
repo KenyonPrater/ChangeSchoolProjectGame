@@ -24,8 +24,8 @@ public class WorldLoader {
 		{
 			p = PlayerFactory.getHolden(w, in);
 		}
-		p.setX(playerstartX);
-		p.setY(playerstartY);
+		p.setX(playerstartX- p.getSprite().getWidth()/2);
+		p.setY(playerstartY - p.getSprite().getHeight()/2);
 		Camera c = new Camera(p, w);
 		w.addEntity(p);
 		w.addEntity(c);

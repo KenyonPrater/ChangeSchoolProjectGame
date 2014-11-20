@@ -19,41 +19,41 @@ public class WorldRefs {
 	public static HashMap<String, String[]> rooms = new HashMap<String, String[]>();
 	
 	
-	public static Trigger[] house1 = {new Trigger(640, 368, 50, false, "GOTO carrousel 70 368 1")};
+	public static Trigger[] house1 = {new Trigger(640, 400, 50, false, "GOTO carrousel 70 400 1")};
 	public static Trigger[] house2 = {};
-	public static Trigger[] house3 = {new Trigger(640, 368, 50, false, "GOTO carrousel 70 368 3")};
+	public static Trigger[] house3 = {new Trigger(640, 400, 50, false, "GOTO carrousel 70 400 3")};
 	
-	public static Trigger[] carrousel1 = {new Trigger(0, 368, 50, false, "GOTO house 570 368 1"),new Trigger(960, 368, 50, false, "GOTO barn 70 368 1")};
+	public static Trigger[] carrousel1 = {new Trigger(0, 400, 50, false, "GOTO house 570 400 1"),new Trigger(960, 400, 50, false, "GOTO barn 70 400 1")};
 	public static Trigger[] carrousel2 = {};
-	public static Trigger[] carrousel3 = {new Trigger(0, 368, 50, false, "GOTO house 570 368 3"), new Trigger(960, 368, 50, false, "GOTO barn 70 368 3")};
+	public static Trigger[] carrousel3 = {new Trigger(0, 400, 50, false, "GOTO house 570 400 3"), new Trigger(960, 400, 50, false, "GOTO barn 70 400 3")};
 	
-	public static Trigger[] barn1 = {new Trigger(0, 368, 50, false, "GOTO carrousel 870 368 1"),new Trigger(960, 368, 50, false, "GOTO road 70 368 1")};
+	public static Trigger[] barn1 = {new Trigger(0, 400, 50, false, "GOTO carrousel 870 400 1"),new Trigger(960, 400, 50, false, "GOTO road 70 370 1")};
 	public static Trigger[] barn2 = {};
-	public static Trigger[] barn3 = {new Trigger(0, 368, 50, false, "GOTO carrousel 870 368 3"),new Trigger(960, 368, 50, false, "GOTO road 70 368 3")};
+	public static Trigger[] barn3 = {new Trigger(0, 400, 50, false, "GOTO carrousel 870 400 3"),new Trigger(960, 400, 50, false, "GOTO road 70 370 3")};
 	
-	public static Trigger[] road1 = {new Trigger(0, 368, 50, false, "GOTO barn 870 368 1"),new Trigger(640, 368, 50, false, "GOTO school 70 368 1")};
+	public static Trigger[] road1 = {new Trigger(0, 370, 50, false, "GOTO barn 870 400 1"),new Trigger(640, 370, 50, false, "GOTO school 70 370 1")};
 	public static Trigger[] road2 = {};
-	public static Trigger[] road3 = {new Trigger(0, 368, 50, false, "GOTO barn 870 368 3"),new Trigger(640, 368, 50, false, "GOTO school 70 368 3")};
+	public static Trigger[] road3 = {new Trigger(0, 370, 50, false, "GOTO barn 870 400 3"),new Trigger(640, 370, 50, false, "GOTO school 70 370 3")};
 	
-	public static Trigger[] school1 = {new Trigger(0, 368, 50, false, "GOTO road 570 368 1"),new Trigger(572, 368, 50, true, "GOTO insideschool 200 368 1")};
-	public static Trigger[] school2 = {new Trigger(800, 368, 50, false, "GOTO field 70 368 2"),new Trigger(572, 368, 50, true, "GOTO insideschool 200 368 2")};
-	public static Trigger[] school3 = {new Trigger(0, 368, 50, false, "GOTO road 570 368 3"),new Trigger(800, 368, 50, false, "GOTO field 70 368 3"),new Trigger(572, 368, 50, true, "GOTO insideschool 200 368 3")};
+	public static Trigger[] school1 = {new Trigger(0, 370, 50, false, "GOTO road 570 370 1"),new Trigger(572, 370, 50, true, "GOTO insideschool 200 390 1")};
+	public static Trigger[] school2 = {new Trigger(800, 370, 50, false, "GOTO field 70 400 2"),new Trigger(572, 370, 50, true, "GOTO insideschool 200 390 2")};
+	public static Trigger[] school3 = {new Trigger(0, 370, 50, false, "GOTO road 570 370 3"),new Trigger(800, 370, 50, false, "GOTO field 70 430 3"),new Trigger(572, 370, 50, true, "GOTO insideschool 200 370 3")};
 	
-	public static Trigger[] insideschool1 = {new Trigger(120, 368, 50, true, "GOTO school 630 368 1"),new Trigger(215, 368, 5, false, "GOTO insideschool 215 368 2")};
-	public static Trigger[] insideschool2 = {new Trigger(120, 368, 50, true, "GOTO school 630 368 2")};
-	public static Trigger[] insideschool3 = {new Trigger(120, 368, 50, true, "GOTO school 630 368 3")};
+	public static Trigger[] insideschool1 = {new Trigger(120, 400, 50, true, "GOTO school 650 370 1"),new Trigger(215, 400, 5, false, "GOTO insideschool 215 370 2")};
+	public static Trigger[] insideschool2 = {new Trigger(120, 400, 50, true, "GOTO school 650 370 2")};
+	public static Trigger[] insideschool3 = {new Trigger(120, 400, 50, true, "GOTO school 650 370 3")};
 	
 	public static Trigger[] field1 = {};
-	public static Trigger[] field2 = {new Trigger(1280, 368, 50, false, "GOTO hosp 70 368 2")};
-	public static Trigger[] field3 = {new Trigger(0, 368, 50, false, "GOTO school 730 368 3"),new Trigger(1280, 368, 50, false, "GOTO hosp 70 368 3")};
+	public static Trigger[] field2 = {new Trigger(1280, 430, 50, false, "GOTO hosp 70 370 2")};
+	public static Trigger[] field3 = {new Trigger(0, 430, 50, false, "GOTO school 730 370 3"),new Trigger(1280, 400, 50, false, "GOTO hosp 70 370 3")};
 	
 	public static Trigger[] hosp1 = {};
-	public static Trigger[] hosp2 = {new Trigger(570, 368, 50, true, "GOTO doc 160 368 2")};
-	public static Trigger[] hosp3 = {new Trigger(570, 368, 50, true, "GOTO doc 160 368 3"),new Trigger(0, 368, 50, false, "GOTO field 1210 368 3")};
+	public static Trigger[] hosp2 = {new Trigger(570, 400, 50, true, "GOTO doc 160 430 2")};
+	public static Trigger[] hosp3 = {new Trigger(570, 400, 50, true, "GOTO doc 160 430 3"),new Trigger(0, 400, 50, false, "GOTO field 1210 400 3")};
 	
 	public static Trigger[] doc1 = {};
-	public static Trigger[] doc2 = {new Trigger(80, 368, 50, true, "GOTO hosp 500 368 2"),new Trigger(480, 368, 5, false, "GOTO doc 480 368 3")};
-	public static Trigger[] doc3 = {new Trigger(80, 368, 50, true, "GOTO hosp 500 368 3")};
+	public static Trigger[] doc2 = {new Trigger(80, 400, 50, true, "GOTO hosp 500 370 2"),new Trigger(480, 400, 5, false, "GOTO doc 480 430 3")};
+	public static Trigger[] doc3 = {new Trigger(80, 400, 50, true, "GOTO hosp 500 370 3")};
 	
 	public static HashMap<String, Trigger[]> triggers = new HashMap<String, Trigger[]>();
 	

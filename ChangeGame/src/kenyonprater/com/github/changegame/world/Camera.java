@@ -36,7 +36,6 @@ public class Camera extends Entity{
 	}
 	public void beginDraw(Graphics g)
 	{
-		System.out.println(this.getX());
 		g.pushTransform();
 		g.translate(-this.getX()+Launcher.WID/2, 0);//+1/2*Launcher.WID+1/2*Launcher.HEI
 	}

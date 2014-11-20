@@ -18,7 +18,7 @@ public class PlayerFactory {
 		for(String s: ImageRefs.child)
 		{
 			try {
-				anims.add(new Animation(new SpriteSheet(s,16,32),250));
+				anims.add(new Animation(new SpriteSheet(s,24,48),250));
 			} catch (SlickException e) {
 				e.printStackTrace();
 			}
@@ -34,7 +34,7 @@ public class PlayerFactory {
 		for(String s: ImageRefs.student)
 		{
 			try {
-				anims.add(new Animation(new SpriteSheet(s,16,48),250));
+				anims.add(new Animation(new SpriteSheet(s,24,72),250));
 			} catch (SlickException e) {
 				e.printStackTrace();
 			}
