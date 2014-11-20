@@ -2,7 +2,6 @@ package kenyonprater.com.github.changegame.world;
 
 import java.util.ArrayList;
 
-import kenyonprater.com.github.changegame.game.Camera;
 import kenyonprater.com.github.changegame.launch.Launcher;
 
 import org.newdawn.slick.Graphics;
@@ -27,11 +26,13 @@ public class World {
 	public void addEntity(Entity e)
 	{
 		entityList.add(e);
+		e.setWorld(this);
 	}
 	
 	public void popEntity(Entity e)
 	{
 		entityList.remove(e);
+		e.setWorld(null);
 	}
 	
 	public World(String[] tile, String background)

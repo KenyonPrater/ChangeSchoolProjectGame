@@ -22,6 +22,15 @@ public class Trigger extends Entity{
 		this.msg = message;
 		this.ig = ig;
 	}
+	
+	public Trigger(float x, float y, int triggerradius, boolean requireskeypress, String message) {
+		super(x, y, new Animation(), null);
+		this.in = InGame.in;
+		this.rad = triggerradius;
+		this.keypress = requireskeypress;
+		this.msg = message;
+		this.ig = InGame.instance;
+	}
 
 	@Override
 	public void update(World w, double dt)
@@ -40,7 +49,7 @@ public class Trigger extends Entity{
 							ig.handleTrigger(msg);
 						}
 					}else{
-						System.out.println("Triggers work, now use them");
+						ig.handleTrigger(msg);
 					}
 				}
 			}

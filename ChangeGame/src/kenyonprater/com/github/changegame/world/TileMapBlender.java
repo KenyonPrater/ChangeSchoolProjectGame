@@ -50,8 +50,9 @@ public class TileMapBlender {
 		{
 			for(int i = 0; i < mapIndex.length; i++)
 			{
-				for(int j = 0; j < mapIndex[0].length; j++)
+				for(int j = 0; j < mapIndex[i].length; j++)
 				{
+					System.out.println(i + " " + j);
 					Image tile = maps.get(mapIndex[i][j]).getTileImage(i, j, layer);
 					if(tile != null)
 					{

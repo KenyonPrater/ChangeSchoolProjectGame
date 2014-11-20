@@ -5,6 +5,14 @@ import org.newdawn.slick.Animation;
 public class Entity {
 
 	private World world;
+	public World getWorld() {
+		return world;
+	}
+
+	public void setWorld(World world) {
+		this.world = world;
+	}
+
 	private Animation sprite;
 	private float x;
 	private float y;

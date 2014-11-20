@@ -22,7 +22,8 @@ public class InGame extends BasicGameState{
 
 	private static int ID;
 	private World w;
-	private Input in;
+	public static Input in;
+	public static InGame instance;
 	
 	InGame(int id)
 	{
@@ -33,9 +34,11 @@ public class InGame extends BasicGameState{
 	@Override
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
+		in = container.getInput();
+		instance = this;
 		WorldRefs.init();
-		w = WorldLoader.createWorld(WorldRefs.hosproom, 2, container.getInput(), 64, 400);
-		w.addEntity(new Trigger(400,400,20,container.getInput(), true, "GOTO hosproom 400 400 3", w, this));
+		
+		w = WorldLoader.createWorld(WorldRefs.house, WorldRefs.house1, 1, container.getInput(), 64, 400);
 	}
 
 	@Override
@@ -59,12 +62,13 @@ public class InGame extends BasicGameState{
 	public void handleTrigger(String msg) {
 		if( msg.contains("GOTO"))
 		{
+			System.out.println(msg);
 			String[] args = msg.split(" ");
 			int x = Integer.parseInt(args[2]);
 			int y = Integer.parseInt(args[3]);
 			String map = args[1];
 			int state = Integer.parseInt(args[4]);
-			w = WorldLoader.createWorld(WorldRefs.refs.get(map), state, in, x, y);
+			w = WorldLoader.createWorld(WorldRefs.rooms.get(map), WorldRefs.triggers.get(map+state), state, in, x, y);
 		}
 	}
 

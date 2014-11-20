@@ -14,6 +14,7 @@ public class Player extends Entity {
 	private Input input;
 	private boolean facing; //right == true
 	private int state = 1;
+	private boolean debugfollow = true;
 	
 	public int getState() {
 		return state;
@@ -39,13 +40,13 @@ public class Player extends Entity {
 		super.update(w, delta);
 		if(input.isKeyDown(input.KEY_LEFT) || input.isKeyDown(input.KEY_A))
 		{
-			this.setDx((float)Math.max(this.getDx()-800*delta, -150));
+			this.setDx((float)Math.max(this.getDx()-3*800*delta, 3*-150));
 			this.setSpriteAsActive(0);
 			facing = false;
 		}
 		if(input.isKeyDown(input.KEY_RIGHT) || input.isKeyDown(input.KEY_D))
 		{
-			this.setDx((float)Math.min(this.getDx()+800*delta, 150));
+			this.setDx((float)Math.min(this.getDx()+3*800*delta, 3*150));
 			this.setSpriteAsActive(1);
 			facing = true;
 		}
