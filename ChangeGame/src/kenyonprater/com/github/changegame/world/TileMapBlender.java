@@ -53,10 +53,15 @@ public class TileMapBlender {
 				for(int j = 0; j < mapIndex[0].length; j++)
 				{
 					Image tile = maps.get(mapIndex[i][j]).getTileImage(i, j, layer);
-					tile.draw(x+maps.get(0).getTileWidth()*i, y+maps.get(0).getTileHeight()*j);
+					if(tile != null)
+					{
+						tile.draw(x+maps.get(0).getTileWidth()*i, y+maps.get(0).getTileHeight()*j);
+					}
 					Image oldtile = maps.get(prevMapIndex[i][j]).getTileImage(i, j, layer);
-					oldtile.draw(x+maps.get(0).getTileWidth()*i, y+maps.get(0).getTileHeight()*j, new Color(1,1,1,this.fadeTime[i][j]/this.maxFadeTime));
-					
+					if(oldtile != null)
+					{
+						oldtile.draw(x+maps.get(0).getTileWidth()*i, y+maps.get(0).getTileHeight()*j, new Color(1,1,1,this.fadeTime[i][j]/this.maxFadeTime));
+					}
 				}
 			}
 		}

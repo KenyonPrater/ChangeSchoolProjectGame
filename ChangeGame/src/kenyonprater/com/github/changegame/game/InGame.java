@@ -3,6 +3,7 @@ package kenyonprater.com.github.changegame.game;
 import java.util.ArrayList;
 
 import kenyonprater.com.github.changegame.helper.AnimationLoader;
+import kenyonprater.com.github.changegame.helper.PlayerFactory;
 import kenyonprater.com.github.changegame.world.World;
 import kenyonprater.com.github.changegame.world.player.Player;
 
@@ -27,14 +28,10 @@ public class InGame extends BasicGameState{
 	@Override
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
-		w = new World(new String[]{"/res/test1.tmx","/res/test2.tmx"}, "/res/testimg.png");
-		ArrayList<Animation> anims = new ArrayList<Animation>();
-		anims.add(AnimationLoader.load("/res/spritetestleft.png", 64, 64));
-		anims.add(AnimationLoader.load("/res/spritetestright.png", 64, 64));
-		anims.add(AnimationLoader.load("/res/spritetestleft.png", 64, 64));
-		anims.add(AnimationLoader.load("/res/spritetestright.png", 64, 64));
-		Player p = new Player(0, 100, anims, container.getInput());
-		p.setState(1);
+		w = new World(new String[]{"/res/lvl/1-1.tmx","/res/lvl/3-11.tmx"}, "/res/bg/child.png");
+		Player p = PlayerFactory.getChild(container.getInput());
+		p.setX(0);
+		p.setY(400);
 		w.addEntity(p);
 	}
 
