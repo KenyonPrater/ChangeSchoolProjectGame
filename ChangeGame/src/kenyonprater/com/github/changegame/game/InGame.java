@@ -28,17 +28,20 @@ public class InGame extends BasicGameState{
 	@Override
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
-		w = new World(new String[]{"/res/lvl/1-1.tmx","/res/lvl/3-11.tmx"}, "/res/bg/child.png");
-		Player p = PlayerFactory.getHolden(container.getInput());
+		w = new World(new String[]{"/res/lvl/1-2.tmx","/res/lvl/3-10.tmx"}, "/res/bg/child.png");
+		Player p = PlayerFactory.getHolden(w,container.getInput());
 		p.setX(0);
 		p.setY(400);
 		w.addEntity(p);
+		Camera c = new Camera(p,w);
+		w.addEntity(c);
+		w.setCamera(c);
 	}
 
 	@Override
 	public void render(GameContainer container, StateBasedGame game, Graphics g)
 			throws SlickException {
-		w.draw();
+		w.draw(g);
 	}
 
 	@Override

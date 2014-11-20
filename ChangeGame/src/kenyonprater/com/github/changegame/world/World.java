@@ -1,7 +1,11 @@
 package kenyonprater.com.github.changegame.world;
 
 import java.util.ArrayList;
+
+import kenyonprater.com.github.changegame.game.Camera;
 import kenyonprater.com.github.changegame.launch.Launcher;
+
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
@@ -11,7 +15,8 @@ public class World {
 	public ArrayList<Entity> entityList;
 	public Image bg;
 	public TileMapBlender tiles;
-	
+	private Camera c;
+
 	public World(ArrayList<TiledMap> tileList, Image background)
 	{
 		tiles = tiles;
@@ -64,15 +69,28 @@ public class World {
 		}
 	}
 	
-	public void draw()
+	public void draw(Graphics g)
 	{
 		bg.draw(0, 0, Launcher.WID, Launcher.HEI);
+		if(c!=null)
+		{c.beginDraw(g);}
+		
+		
 		tiles.render(0, 0);
 		for (int i = 0; i < entityList.size(); i++)
 		{
 			entityList.get(i).draw();
 		}
+		if(c!=null)
+		{c.endDraw(g);}
 		
 	}
 	
+	public Camera getCamera() {
+		return c;
+	}
+
+	public void setCamera(Camera c) {
+		this.c = c;
+	}
 }

@@ -11,11 +11,11 @@ public class Entity {
 	private float dx;
 	private float dy;
 
-	public Entity(float x, float y, Animation anim)
+	public Entity(float x, float y, Animation anim, World w)
 	{
 		this.x = x;
 		this.y = y;
-		
+		world = w;
 		this.sprite = anim;
 	}
 

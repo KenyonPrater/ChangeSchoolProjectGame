@@ -23,8 +23,8 @@ public class Player extends Entity {
 		this.state = state;
 	}
 
-	public Player(float x, float y, ArrayList<Animation> anims, Input in) {
-		super(x, y, anims.get(0));
+	public Player(float x, float y, ArrayList<Animation> anims, World w, Input in) {
+		super(x, y, anims.get(0), w);
 		sprites = anims;
 		input = in;
 		facing = true;
@@ -33,7 +33,6 @@ public class Player extends Entity {
 	@Override
 	public void update(World w, double delta)
 	{
-		System.out.println(this.getX());
 		w.tiles.changeAllTileInArea((int)(this.getX()/w.tiles.getTileWidth()), (int)(this.getY()/w.tiles.getTileHeight()), 5, state);
 		
 		

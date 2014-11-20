@@ -2,6 +2,7 @@ package kenyonprater.com.github.changegame.helper;
 
 import java.util.ArrayList;
 
+import kenyonprater.com.github.changegame.world.World;
 import kenyonprater.com.github.changegame.world.player.Player;
 
 import org.newdawn.slick.Animation;
@@ -11,7 +12,7 @@ import org.newdawn.slick.SpriteSheet;
 
 public class PlayerFactory {
 
-	public static Player getChild(Input in)
+	public static Player getChild(World w, Input in)
 	{
 		ArrayList<Animation> anims = new ArrayList<Animation>();
 		for(String s: ImageRefs.child)
@@ -22,12 +23,12 @@ public class PlayerFactory {
 				e.printStackTrace();
 			}
 		}
-		Player p = new Player(0, 0, anims, in);
+		Player p = new Player(0, 0, anims,w, in);
 		p.setState(1);
 		return p;
 	}
 	
-	public static Player getStudent(Input in)
+	public static Player getStudent(World w, Input in)
 	{
 		ArrayList<Animation> anims = new ArrayList<Animation>();
 		for(String s: ImageRefs.student)
@@ -38,12 +39,12 @@ public class PlayerFactory {
 				e.printStackTrace();
 			}
 		}
-		Player p = new Player(0, 0, anims, in);
+		Player p = new Player(0, 0, anims, w, in);
 		p.setState(2);
 		return p;
 	}
 	
-	public static Player getHolden(Input in)
+	public static Player getHolden(World w, Input in)
 	{
 		ArrayList<Animation> anims = new ArrayList<Animation>();
 		for(String s: ImageRefs.holden)
@@ -54,7 +55,7 @@ public class PlayerFactory {
 				e.printStackTrace();
 			}
 		}
-		Player p = new Player(0, 0, anims, in);
+		Player p = new Player(0, 0, anims,w, in);
 		p.setState(3);
 		return p;
 	}
