@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import kenyonprater.com.github.changegame.helper.AnimationLoader;
 import kenyonprater.com.github.changegame.helper.PlayerFactory;
+import kenyonprater.com.github.changegame.helper.WorldRefs;
 import kenyonprater.com.github.changegame.world.World;
+import kenyonprater.com.github.changegame.world.WorldLoader;
 import kenyonprater.com.github.changegame.world.player.Player;
 
 import org.newdawn.slick.Animation;
@@ -28,14 +30,7 @@ public class InGame extends BasicGameState{
 	@Override
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
-		w = new World(new String[]{"/res/lvl/1-2.tmx","/res/lvl/3-10.tmx"}, "/res/bg/child.png");
-		Player p = PlayerFactory.getChild(w,container.getInput());
-		p.setX(0);
-		p.setY(400);
-		w.addEntity(p);
-		Camera c = new Camera(p,w);
-		w.addEntity(c);
-		w.setCamera(c);
+		w = WorldLoader.createWorld(WorldRefs.hosproom, 2, container.getInput(), 64, 400);
 	}
 
 	@Override

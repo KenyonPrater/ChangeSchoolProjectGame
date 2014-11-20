@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="15" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="holden" tilewidth="32" tileheight="32">
   <image source="../tile/holden.png" width="480" height="480"/>
  </tileset>
- <layer name="Tile Layer 1" width="30" height="15">
+ <layer name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYHABDiDmBGI+IOano31cQMwNxDxAzEsH+/cC8T4ceD8VzOfAIX4GiM/iwOeQ1PkAsS8Q+5FgHywccdl7AIgPErA3GohjgDiWSHth4YgrzED2ngfiC0j2HQLiw2j2ZgFxNhDnEGkvLBzPEZBHxheB+BKankogrgLiaixmKGHBt4H4DhDfJSCPjB8A8UMsejpxmKEPxAYDQNsBsf0A0AC7zs8XCAcAAA==
+   H4sIAAAAAAAAC+3OWwqCQBSAYbvbvezyakU9Fy2g6L3aQLUBdQPWBrJV9wdHkCG0IQd6aODjMKDnH8v6n18/NroGd9fRRAudHFvx7obsjxsv7ZxaBRQzlL5s9NDP4Cj/7HHAUaNRRkWjccIZF43GAMPEzipqKQ0PPgKNhvruEcZvGmuZIa64fbB/BhcTxRyLxH0q3+5k3hHhIfc0S6wMzw22hucT5bZIRtwFAAA=
   </data>
  </layer>
 </map>

@@ -3,8 +3,10 @@ package kenyonprater.com.github.changegame.helper;
 public class ImageRefs {
 
 	public static String childBG = "/res/bg/child.png";
-	public static String schoolBG = "/res/bg/school.png";
+	public static String schoolBG = "/res/bg/student.png";
 	public static String holdenBG = "/res/bg/holden.png";
+	
+	public static String[] bg = {"", "/res/bg/child.png","/res/bg/student.png","/res/bg/holden.png"};
 	
 	public static String[] child = {"/res/char/childwalkleft.png",
 									"/res/char/childwalkright.png",
