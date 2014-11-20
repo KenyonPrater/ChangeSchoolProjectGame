@@ -1,5 +1,7 @@
 package kenyonprater.com.github.changegame.helper;
 
+import java.util.HashMap;
+
 public class WorldRefs {
 
 	public static String[] house = {"/res/lvl/1-1.tmx","/res/lvl/1-1.tmx","/res/blankmap.tmx","/res/lvl/3-9.tmx"};
@@ -11,5 +13,19 @@ public class WorldRefs {
 	public static String[] field = {"/res/lvl/2-3.tmx","/res/blankmap.tmx","/res/lvl/2-3.tmx","/res/lvl/3-3.tmx"};
 	public static String[] hosp = {"/res/lvl/2-4.tmx","/res/blankmap.tmx","/res/lvl/2-4.tmx","/res/lvl/3-2.tmx"};
 	public static String[] hosproom = {"/res/lvl/2-5.tmx","/res/blankmap.tmx","/res/lvl/2-5.tmx","/res/lvl/3-1.tmx"};
+	
+	public static HashMap<String, String[]> refs = new HashMap<String, String[]>();
+	public static void init()
+	{
+		refs.put("house", house);
+		refs.put("carrusel", carrusel);
+		refs.put("barn", barn);
+		refs.put("road", road);
+		refs.put("school", school);
+		refs.put("insideschool", insideschool);
+		refs.put("field", field);
+		refs.put("hosp", hosp);
+		refs.put("hosproom", hosproom);
+	}
 	
 }

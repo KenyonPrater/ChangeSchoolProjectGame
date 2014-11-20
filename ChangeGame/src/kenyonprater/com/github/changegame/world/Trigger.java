@@ -1,7 +1,6 @@
-package kenyonprater.com.github.changegame.helper;
+package kenyonprater.com.github.changegame.world;
 
-import kenyonprater.com.github.changegame.world.Entity;
-import kenyonprater.com.github.changegame.world.World;
+import kenyonprater.com.github.changegame.game.InGame;
 import kenyonprater.com.github.changegame.world.player.Player;
 
 import org.newdawn.slick.Animation;
@@ -13,13 +12,15 @@ public class Trigger extends Entity{
 	int rad;
 	boolean keypress;
 	String msg;
+	InGame ig;
 	
-	public Trigger(float x, float y, int triggerradius, Input in, boolean requireskeypress, String message, World w) {
+	public Trigger(float x, float y, int triggerradius, Input in, boolean requireskeypress, String message, World w, InGame ig) {
 		super(x, y, new Animation(), w);
 		this.in = in;
 		this.rad = triggerradius;
 		this.keypress = requireskeypress;
 		this.msg = message;
+		this.ig = ig;
 	}
 
 	@Override
@@ -36,7 +37,7 @@ public class Trigger extends Entity{
 					{
 						if(in.isKeyDown(in.KEY_DOWN))
 						{
-							System.out.println("Triggers work, now use them");
+							ig.handleTrigger(msg);
 						}
 					}else{
 						System.out.println("Triggers work, now use them");
